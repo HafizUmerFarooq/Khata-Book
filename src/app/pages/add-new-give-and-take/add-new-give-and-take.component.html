@@ -1,0 +1,91 @@
+<div class="container mt-5">
+  <h2 class="mb-3">Add Give And Take</h2>
+  <form>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Date</label>
+          <input
+            type="date"
+            class="form-control"
+            name="Date"
+            id="exampleFormControlInput1"
+            [(ngModel)]="newGiveAndTake.date"
+          />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput2">Bill Number</label>
+          <input
+            type="number"
+            class="form-control"
+            name="BillNumber"
+            id="exampleFormControlInput2"
+            placeholder="Enter Bill Number"
+            [(ngModel)]="newGiveAndTake.billNumber"
+          />
+          <div *ngIf="billNoIsRequired" class="alert">
+            Bill Number Is Required.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput3">Weight</label>
+          <input
+            type="number"
+            class="form-control"
+            name="Weight"
+            id="exampleFormControlInput3"
+            placeholder="Enter Weight"
+            [(ngModel)]="newGiveAndTake.weight"
+          />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput4">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            name="Price"
+            id="exampleFormControlInput4"
+            placeholder="Enter Price"
+            [(ngModel)]="newGiveAndTake.price"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="exampleFormControlInput4">Received</label>
+          <input
+            type="number"
+            class="form-control"
+            name="Received"
+            id="exampleFormControlInput4"
+            placeholder="Enter Received Balance"
+            [(ngModel)]="newGiveAndTake.youGave"
+          />
+        </div>
+      </div>
+      <!-- <div class="col-6">
+            <div class="form-group">
+                <label for="exampleFormControlInput4">Advance</label>
+                <input type="number" class="form-control" name="address" id="exampleFormControlInput4" placeholder="Enter Student Address" [(ngModel)]="newGiveAndTake.youTake">
+              </div>
+        </div> -->
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary mt-3" (click)="submitForm()">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

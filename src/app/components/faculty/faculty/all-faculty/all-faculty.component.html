@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Teacher Name</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of facultyRecord">
+            <td>{{record._id}}</td>
+            <td>{{record.name}}</td>
+            <td>{{record.subject}}</td>
+            <td>{{record.address}}</td>
+            <td>{{record.phoneNumber}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="editTeacher(record._id)">Edit</button> | <button type="button" class="btn btn-danger" (click)="deleteTeacher(record._id,record)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
