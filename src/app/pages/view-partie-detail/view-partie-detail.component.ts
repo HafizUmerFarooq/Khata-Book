@@ -15,6 +15,7 @@ export class ViewPartieDetailComponent implements OnInit {
   totalGiveAndTake: any = [];
   receivedAmount:number = 0;
   totalBalance:number = 0;
+  totalPay:number = 0;
   remainingBalance:number = 0;
   public partieGiveAndTake:IParties = {
     serialNumber: '',
@@ -57,14 +58,14 @@ export class ViewPartieDetailComponent implements OnInit {
           this.totalBalance = this.totalBalance + balance.total;
         };
 
-        if(balance.youTake){
-          this.totalBalance = this.totalBalance + balance.youTake;
+        if(balance.pay){
+          this.totalPay = this.totalPay + balance.pay;
         }
       });
 
-      if(this.receivedAmount && this.totalBalance){
-        this.remainingBalance = this.totalBalance - this.receivedAmount;
-      }
+      // if(this.receivedAmount && this.totalBalance){
+      //   this.remainingBalance = this.totalBalance - this.receivedAmount;
+      // }
     });
   }
 

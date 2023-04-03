@@ -3,19 +3,15 @@
         <div class="col-2">
             <h5>Name: {{partieGiveAndTake.name}}</h5>
         </div>
-        <div class="col-4">
-          <h5>Total Balance: {{totalBalance}}</h5>
+        <div class="col-2">
+          <h5>Total Received: {{receivedAmount}}</h5>
       </div>
-        <div class="col-3">
-          <h5>Received: {{receivedAmount}}</h5>
-      </div>
-
-      <!-- <div class="col-3">
-        <h5>Remaining Balance: {{remainingBalance}}</h5>
-    </div> -->
-        <!-- <div class="col-3">
-          <h5>Remaining Balance: {{remainingBalance}}</h5>
-      </div> -->
+      <div class="col-2">
+        <h5>Total Pay: {{totalPay}}</h5>
+    </div>
+    <div class="col-3">
+      <h5>Balance: {{totalBalance}}</h5>
+  </div>
       <div class="col-3">
         <h5>Add New: <button type="button" class="btn btn-success" (click)="addNewGiveAndTake()">Add</button></h5>
     </div>
@@ -30,7 +26,8 @@
             <th scope="col">Weight</th>
             <th scope="col">Price</th>
             <th scope="col">Received</th>
-            <th scope="col">Total</th>
+            <th scope="col">Pay</th>
+            <th scope="col">Balance</th>
             <!-- <th scope="col">Advance</th> -->
             <th scope="col">Action</th>
           </tr>
@@ -42,6 +39,7 @@
             <td>{{record.weight}}</td>
             <td>{{record.price}}</td>
             <td>{{record.youGave}}</td>
+            <td>{{record.pay}}</td>
             <td>{{record.total}}</td>
             <!-- <td>{{record.youTake}}</td> -->
             <td>  

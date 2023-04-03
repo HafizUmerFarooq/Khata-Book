@@ -14,6 +14,6 @@ export interface IGiveAndTake{
     weight?:number,
     price?:number,
     youGave?:number,
-    youTake?:number,
+    pay?:number,
     total:number
 }

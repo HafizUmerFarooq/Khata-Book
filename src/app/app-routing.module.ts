@@ -10,6 +10,7 @@ import { ViewPartieDetailComponent } from './pages/view-partie-detail/view-parti
 import { AuthenticationGuard } from './services/authentication.guard';
 
 const routes: Routes = [
+  {path: '',redirectTo: 'login',pathMatch: 'full'},
   {path: 'login',component: LoginComponent},
   {path: 'sign-up',component: SignupComponent},
   {path: 'all-parties',component: PartiesComponent, canActivate: [AuthenticationGuard]},
